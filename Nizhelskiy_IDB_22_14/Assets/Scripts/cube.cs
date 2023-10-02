@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class cube : MonoBehaviour
 {
-    public int k = 0;
+    private int k = 0;
     public GameObject CUBE;
     public Text PushCount;
     public Text Button;
