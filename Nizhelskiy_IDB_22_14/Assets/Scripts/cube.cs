@@ -16,6 +16,7 @@ public class cube : MonoBehaviour
     void Start()
     {
         Button.text = "OFF";
+        PushCount.text = "0";
     }
 
     // Update is called once per frame
