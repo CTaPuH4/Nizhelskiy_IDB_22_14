@@ -327,27 +327,39 @@ Transform:
   m_GameObject: {fileID: 608149785}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13333334, y: 1.0439863, z: -0.86666673}
-  m_LocalScale: {x: 0.83333325, y: 1, z: 0.83333325}
+  m_LocalPosition: {x: 0.8484001, y: 1.0439863, z: -0.52}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 867261884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &608149790
-MonoBehaviour:
+--- !u!54 &608149790
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608149785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b376c4ba4a2134fa8c65c21b3ef274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CUBE: {fileID: 608149785}
-  PushCount: {fileID: 2124506966}
-  Button: {fileID: 751981147}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Restart
 --- !u!222 &751981148
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -533,6 +545,9 @@ GameObject:
   - component: {fileID: 800101676}
   - component: {fileID: 800101675}
   - component: {fileID: 800101674}
+  - component: {fileID: 800101677}
+  - component: {fileID: 800101679}
+  - component: {fileID: 800101678}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -549,8 +564,8 @@ Transform:
   m_GameObject: {fileID: 800101672}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1333333, y: 1.043986, z: -0.8666667}
-  m_LocalScale: {x: 0.83333325, y: 1, z: 0.83333325}
+  m_LocalPosition: {x: -0.50639915, y: 1.043986, z: -0.52}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 867261884}
@@ -626,6 +641,60 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800101672}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &800101677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800101672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e726f26bbe41b42adfb6a9623073a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Velocity: 10
+--- !u!54 &800101678
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800101672}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &800101679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800101672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a9893b345197f4293b6b6c0106f83b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP_Counter: {fileID: 2124506966}
+  Health_Points: 10
 --- !u!1 &839438531
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +708,7 @@ GameObject:
   - component: {fileID: 839438534}
   - component: {fileID: 839438533}
   m_Layer: 5
-  m_Name: ON/OFF Button
+  m_Name: Restart Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,9 +778,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 608149790}
-        m_TargetAssemblyTypeName: cube, Assembly-CSharp
-        m_MethodName: aboba
+      - m_Target: {fileID: 800101679}
+        m_TargetAssemblyTypeName: HP, Assembly-CSharp
+        m_MethodName: Dead
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -860,7 +929,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -41, y: 0.36, z: 4.37}
-  m_LocalScale: {x: 1.2, y: 1, z: 1.2}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 608149789}
@@ -1022,7 +1091,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.10736213, z: -0, w: 0.99422}
-  m_LocalPosition: {x: 2.3999999, y: 1.27, z: -4.95}
+  m_LocalPosition: {x: 1.464, y: 1.27, z: -5.021}
   m_LocalScale: {x: 0.8333332, y: 1, z: 0.8333332}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1040,7 +1109,7 @@ GameObject:
   - component: {fileID: 1009649033}
   - component: {fileID: 1009649032}
   m_Layer: 5
-  m_Name: '"Counter"'
+  m_Name: Health Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1098,7 +1167,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Counter:'
+  m_Text: 'HP:'
 --- !u!222 &1009649033
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1119,7 +1188,7 @@ GameObject:
   - component: {fileID: 2124506967}
   - component: {fileID: 2124506966}
   m_Layer: 5
-  m_Name: PushCounter
+  m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1177,7 +1246,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -----------
+  m_Text: 
 --- !u!222 &2124506967
 CanvasRenderer:
   m_ObjectHideFlags: 0
